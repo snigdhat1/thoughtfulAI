@@ -1,7 +1,5 @@
 # How to run
 
-
-
 1. **Clone the repository if you haven't:**
 
    ```bash
@@ -15,12 +13,32 @@
 
 3. **Run the script**
     ```bash
-    python sort.py
+    python sort.py <width> <height> <length> <mass>
     ```
     or if you are using python3
     ```bash
-    python3 sort.py
+    python3 sort.py <width> <height> <length> <mass>
     ```
 
 
-I have test cases already created so running it will use those test cases as inputs to the function
+I have test cases created in the test_sort.py file. To run:
+
+1. **Install pytest**
+
+   ```bash
+   pip install pytest
+   ```
+   or if you are using python3
+    ```bash
+    python3 -m pip install pytest
+    ```
+
+2. **Make sure pytest is installed (I am using pytest 8.4.0):**
+    ```bash
+    pytest --version
+    ```
+
+3. **Run the script**
+    ```bash
+    pytest test_sort.py
+    ```
