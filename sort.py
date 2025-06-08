@@ -1,11 +1,10 @@
-##### CHANGE BACK TO SORT
-def sort_packages(width, height, length, mass) -> str:
+def sort(width, height, length, mass) -> str:
     volume = width * height * length
     bulky = False
     heavy = False
     if volume >= 1_000_000 or width >= 150 or height >= 150 or length >= 150:
         bulky = True
-    ##### CHANGE BACK TO SORT
+
     if mass >= 20:
         heavy = True
    
@@ -15,7 +14,7 @@ def sort_packages(width, height, length, mass) -> str:
         return "SPECIAL"
     else:
         return "STANDARD"
-##### CHANGE BACK TO SORT
+
 
 
 if __name__ == "__main__":
@@ -60,6 +59,6 @@ if __name__ == "__main__":
         (1,1,1,19.9),
     ]
     for width, height, length, mass in test_cases:
-        result = sort_packages(width, height, length, mass)
+        result = sort(width, height, length, mass)
         volume = width * height * length
         print(f"Input: ({width}, {height}, {length}, {mass}) → Result: {result}")
